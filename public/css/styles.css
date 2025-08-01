@@ -1,28 +1,94 @@
-html {
-    height: 100%;
-    width: 100%;
-  }
-  
-  body {
-    display: table;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .row {
-    display: table-row;
-    height: 75%;
-    background-color: #282828;
-    text-align: center;
-  }
-  
-  .h1 {
-    font-size: 54px;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #FFFFFF 0%, #FF6600 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-top: 100px;
-  }
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f7f9fb;
+  color: #22223b;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 32px rgba(37, 99, 235, 0.10);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 420px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  border: 1.5px solid #e2e8f0;
+  background: #f4f7fd;
+  transition: border-color 0.2s;
+  outline: none;
+}
+input[type="text"]:focus {
+  border-color: #4f8cff;
+  background: #fff;
+}
+
+button {
+  padding: 0.7rem 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.7rem;
+  background: #4f8cff;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(79,140,255,0.09);
+  cursor: pointer;
+  transition: background 0.18s;
+}
+button:hover, button:focus {
+  background: #2457b4;
+}
+
+.names-section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgba(79,140,255,0.10);
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+}
+
+h2, h3 {
+  color: #2563eb;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.7rem;
+}
+
+li {
+  font-size: 1.13rem;
+  background: #f4f7fd;
+  margin-bottom: 0.65rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  color: #232e48;
+  box-shadow: 0 1.5px 6px rgba(79,140,255,0.05);
+  transition: background 0.16s;
+}
+li:hover {
+  background: #e0e7ff;
+}
