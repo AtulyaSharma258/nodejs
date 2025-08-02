@@ -1,21 +1,40 @@
-const express = require('express');
+// app.js
+const fastify = require('fastify')({ logger: true });
 const path = require('path');
-const indexRouter = require('./routes/index');
 
-const app = express();
-const PORT = 3000;
-
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Use the router for handling routes
-app.use('/', indexRouter);
-
-// Catch-all route for handling 404 errors
-app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
-  });
-
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+// Serve static files (for your public/index.html, css, js, etc.)
+fastify.register(require('@fastify/static'), {
+  root: path.join(__dirname, 'public'),
+  prefix: '/', // Serve at root
 });
+
+// In-memory names array (resets on server restart)
+let names = [];
+
+// GET /names - return all names
+fastify.get('/names', async (request, reply) => {
+  reply.send(names);
+});
+
+// POST /names - add a name to the array
+fastify.post('/names', async (request, reply) => {
+  const { name } = request.body;
+  if (typeof name === 'string' && name.trim()) {
+    names.push(name.trim());
+    reply.code(201).send({ success: true });
+  } else {
+    reply.code(400).send({ success: false, message: 'Name required' });
+  }
+});
+
+// Start the server
+const start = async () => {
+  try {
+    await fastify.listen({ port: 3000, host: '0.0.0.0' });
+    console.log('Server running on http://localhost:3000');
+  } catch (err) {
+    fastify.log.error(err);
+    process.exit(1);
+  }
+};
+start();
