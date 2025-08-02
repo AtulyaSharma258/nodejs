@@ -1,26 +1,13 @@
-body {
-  background: linear-gradient(120deg, #a3d8f4 0%, #f9e076 100%);
-  font-family: 'Luckiest Guy', cursive, Comic Sans MS, cursive, sans-serif;
-  margin: 0;
-  min-height: 100vh;
-}
-header {
-  text-align: center;
-  color: #333;
-  padding: 2rem 0 1rem 0;
-  position: relative;
-}
 .header-characters {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 12px;
+  gap: 18px;
   margin-bottom: -12px;
 }
 .header-characters img {
   height: 54px;
   filter: drop-shadow(0 2px 4px #0003);
-  background: none;
 }
 .header-sb { animation: float 3.2s infinite alternate; }
 .header-krabs { animation: float 2.7s infinite 0.5s alternate; }
@@ -35,86 +22,7 @@ header {
   50% { transform: translateY(-15px);}
   100% { transform: translateY(0px);}
 }
-header h1 {
-  font-size: 3rem;
-  color: #1368ce;
-  margin: 0.5rem 0 0 0;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 0 #fce205, 5px 5px 10px #1e5392;
-}
-header h2 {
-  font-size: 1.2rem;
-  color: #dfb73c;
-  margin: 0;
-  text-shadow: 1px 1px 0 #fff2;
-}
-main {
-  max-width: 450px;
-  margin: 2rem auto;
-  background: #fff9e6bb;
-  border-radius: 2rem;
-  padding: 2rem;
-  box-shadow: 0 8px 40px #3333;
-  position: relative;
-}
-.order-section {
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
-.order-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-#nameInput, #orderInput {
-  border: 2px solid #48c6ef;
-  border-radius: 20px;
-  padding: 0.7rem 1.3rem;
-  font-size: 1.1rem;
-  font-family: inherit;
-  background: #f6ffed;
-  width: 80%;
-  max-width: 250px;
-  transition: box-shadow 0.2s;
-}
-#nameInput:focus, #orderInput:focus {
-  box-shadow: 0 0 10px #f9e07699;
-  outline: none;
-}
-.order-section button {
-  padding: 0.7rem 2.2rem;
-  border: none;
-  border-radius: 22px;
-  background: linear-gradient(90deg, #48c6ef 30%, #6f86d6 100%);
-  color: #fff;
-  font-size: 1.2rem;
-  font-family: inherit;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 18px #48c6ef44;
-  margin-top: 0.3rem;
-  transition: background 0.15s, transform 0.15s;
-}
-.order-section button:hover {
-  background: linear-gradient(90deg, #f9e076 0%, #48c6ef 100%);
-  color: #333;
-  transform: scale(1.05);
-}
-.spongebob-reaction {
-  margin-top: 10px;
-  min-height: 48px;
-  font-size: 1.2rem;
-  color: #1e5392;
-  animation: pop-in 0.6s;
-}
-@keyframes pop-in {
-  from { opacity: 0; transform: scale(0.5);}
-  to { opacity: 1; transform: scale(1);}
-}
 
-/* --- Fun SpongeBob Images --- */
 .jellyfish {
   width: 56px;
   display: block;
@@ -126,41 +34,6 @@ main {
   50% { transform: translateY(-18px) scale(1.04);}
   100% { transform: translateY(0);}
 }
-
-.orders-board {
-  background: #f1e4b5cc;
-  border-radius: 1rem;
-  padding: 1.3rem 1.2rem;
-  box-shadow: 0 4px 16px #b7b29e55;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.orders-board h3 {
-  color: #e66924;
-  margin-top: 0;
-}
-#ordersList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-#ordersList li {
-  background: #48c6ef33;
-  margin: 0.5rem 0;
-  padding: 0.8rem 1rem;
-  border-radius: 15px;
-  font-size: 1.12rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 6px #a3d8f444;
-}
-#ordersList li span {
-  color: #0a5fa7;
-  font-weight: bold;
-}
-
-/* Floating Patrick */
 .pat-float {
   position: absolute;
   right: -56px;
@@ -176,18 +49,6 @@ main {
   100% { transform: rotate(-3deg) translateY(0);}
 }
 
-footer {
-  text-align: center;
-  color: #fff;
-  background: #1368ce;
-  padding: 1rem 0 1.2rem 0;
-  margin-top: 2rem;
-  border-radius: 1rem 1rem 0 0;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  box-shadow: 0 -5px 24px #1368ce22;
-  position: relative;
-}
 .footer-crew {
   display: flex;
   justify-content: center;
@@ -202,23 +63,5 @@ footer {
 .footer-sb { animation: float 2.4s infinite 0.2s alternate;}
 .footer-krabs { animation: float 2.1s infinite 0.85s alternate;}
 .footer-squidward { animation: float 2.25s infinite 0.31s alternate;}
+.footer-starfish { animation: float 2.5s infinite 0.4s alternate;}
 
-/* --- Responsive --- */
-@media (max-width: 600px) {
-  main {
-    padding: 1rem;
-    border-radius: 1rem;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  .order-section form {
-    gap: 0.7rem;
-  }
-  .header-characters img {
-    height: 32px;
-  }
-  .pat-float {
-    display: none;
-  }
-}
