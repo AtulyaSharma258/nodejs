@@ -2,25 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Name Submission Form</title>
-  <!-- Link to your external CSS file -->
+  <title>The Krusty Krab</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="form-card">
-    <h2>Submit a Name</h2>
-    <form id="nameForm">
-      <input type="text" id="nameInput" placeholder="Enter a name" required />
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+  <header>
+    <img src="https://pngimg.com/d/krabby_patty_PNG52.png" class="krabby-logo" alt="Krabby Patty">
+    <h1>The Krusty Krab</h1>
+    <h2>Home of the World Famous Krabby Patty!</h2>
+  </header>
 
-  <div class="names-section">
-    <h3>Submitted Names:</h3>
-    <ul id="namesList"></ul>
-  </div>
+  <main>
+    <section class="order-section">
+      <h3>Order Your Krabby Patty!</h3>
+      <form id="orderForm">
+        <input type="text" id="nameInput" placeholder="Your name (e.g. SpongeBob)" required />
+        <select id="orderInput" required>
+          <option value="">Choose your patty...</option>
+          <option>Krabby Patty</option>
+          <option>Double Krabby Patty</option>
+          <option>Krusty Combo Meal</option>
+          <option>Kelp Shake</option>
+          <option>Coral Bits</option>
+          <option>Jellyfish Jelly Deluxe</option>
+        </select>
+        <button type="submit">Order!</button>
+      </form>
+      <div class="spongebob-reaction" id="reaction"></div>
+    </section>
 
-  <!-- Use ONLY your external JavaScript file -->
-  <script src="script.js"></script>
+    <section class="orders-board">
+      <h3>Current Orders</h3>
+      <ul id="ordersList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>🍔 The Krusty Krab • Bikini Bottom, Pacific Ocean • "Is mayonnaise an instrument?"</span>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
