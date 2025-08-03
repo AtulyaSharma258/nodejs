@@ -3,92 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <title>Krishna Water Supply Company</title>
-  <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <img src="images/krishna logo.png" alt="Krishna Water Supply Logo" class="logo">
+    <img src="images/krishna logo.png" alt="Krishna Logo" />
     <h1>Krishna Water Supply Company</h1>
-    <h2>Supplying Quality Pipes & Fittings Since 1984</h2>
+    <div class="subtitle">Supplying Quality Pipes & Fittings Since 1984</div>
     <nav>
-      <a href="#products">Products</a>
+      <a href="#products" class="active">Products</a>
       <a href="#directors">Directors</a>
       <a href="#enquiry">Enquiry</a>
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <img src="images/Column Pipe.webp" alt="Column Pipe" class="hero-img">
-    <div class="hero-text">
-      <h3>Your trusted source for MS Casing, Slotted, Column Pipes and Flange Fittings</h3>
-      <button id="enquiryBtn">Enquire Now</button>
+    <img src="images/Column Pipe.webp" alt="Column Pipes" class="hero-img"/>
+    <div class="hero-content">
+      <h2>Your trusted source for MS Casing, Slotted, Column Pipes and Flange Fittings</h2>
+      <p>Supplying Sahibabad and the NCR region since 1984.</p>
+      <button class="enquire-btn">Enquire Now</button>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" class="products">
+  <section id="products" class="products-section">
     <h2>Our Products</h2>
-    <div class="product-gallery">
+    <div class="products-grid">
       <div class="product-card">
         <img src="images/Column Pipe.webp" alt="Column Pipe">
-        <h4>Column Pipe</h4>
+        <div class="product-name">Column Pipe</div>
       </div>
       <div class="product-card">
-        <img src="images/Flange.webp" alt="Flange Fittings">
-        <h4>Flange & Fittings</h4>
+        <img src="images/Flange.webp" alt="Flange & Fittings">
+        <div class="product-name">Flange & Fittings</div>
       </div>
       <div class="product-card">
         <img src="images/Slotted Pipe.webp" alt="Slotted Pipe">
-        <h4>Slotted Pipe</h4>
+        <div class="product-name">Slotted Pipe</div>
       </div>
       <div class="product-card">
         <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe">
-        <h4>MS Casing Pipe</h4>
+        <div class="product-name">MS Casing Pipe</div>
       </div>
     </div>
   </section>
 
-  <!-- Directors -->
-  <section id="directors" class="directors">
-    <h2>Meet the Directors</h2>
-    <div class="director-list">
+  <section id="directors" class="directors-section">
+    <h2>Directors</h2>
+    <div class="directors-grid">
+      <div class="director-card">
+        <img src="images/IMG_2345.JPG" alt="Shakuntla Sharma">
+        <div class="director-name">Shakuntla Sharma</div>
+        <div class="director-role">Managing Director</div>
+      </div>
       <div class="director-card">
         <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
-        <h4>Sanjay Sharma</h4>
-        <p>Managing Director</p>
-      </div>
-      <div class="director-card">
-        <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
-        <h4>Atulya Sharma</h4>
-        <p>Director</p>
+        <div class="director-name">Sanjay Sharma</div>
+        <div class="director-role">Director</div>
       </div>
     </div>
   </section>
 
-  <!-- Enquiry Modal -->
-  <div id="enquiryModal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <h3>Send an Enquiry</h3>
-      <form id="enquiryForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <div id="enquiryStatus"></div>
-    </div>
-  </div>
+  <section id="enquiry" class="enquiry-section">
+    <h2>Enquiry</h2>
+    <form class="enquiry-form" id="enquiryForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Enquiry</button>
+      <div id="enquiryThanks" class="thanks-message"></div>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Krishna Water Supply Company. All rights reserved.</p>
+    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
   </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Krishna Water Supply Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="images/krishna logo.png" alt="Krishna Logo" />
+    <h1>Krishna Water Supply Company</h1>
+    <div class="subtitle">Supplying Quality Pipes & Fittings Since 1984</div>
+    <nav>
+      <a href="#products" class="active">Products</a>
+      <a href="#directors">Directors</a>
+      <a href="#enquiry">Enquiry</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <img src="images/Column Pipe.webp" alt="Column Pipes" class="hero-img"/>
+    <div class="hero-content">
+      <h2>Your trusted source for MS Casing, Slotted, Column Pipes and Flange Fittings</h2>
+      <p>Supplying Sahibabad and the NCR region since 1984.</p>
+      <button class="enquire-btn">Enquire Now</button>
+    </div>
+  </section>
+
+  <section id="products" class="products-section">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="images/Column Pipe.webp" alt="Column Pipe">
+        <div class="product-name">Column Pipe</div>
+      </div>
+      <div class="product-card">
+        <img src="images/Flange.webp" alt="Flange & Fittings">
+        <div class="product-name">Flange & Fittings</div>
+      </div>
+      <div class="product-card">
+        <img src="images/Slotted Pipe.webp" alt="Slotted Pipe">
+        <div class="product-name">Slotted Pipe</div>
+      </div>
+      <div class="product-card">
+        <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe">
+        <div class="product-name">MS Casing Pipe</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="directors" class="directors-section">
+    <h2>Directors</h2>
+    <div class="directors-grid">
+      <div class="director-card">
+        <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
+        <div class="director-name">Atulya Sharma</div>
+        <div class="director-role">Director</div>
+      </div>
+      <div class="director-card">
+        <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
+        <div class="director-name">Sanjay Sharma</div>
+        <div class="director-role">Managing Director</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="enquiry" class="enquiry-section">
+    <h2>Enquiry</h2>
+    <form class="enquiry-form" id="enquiryForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Enquiry</button>
+      <div id="enquiryThanks" class="thanks-message"></div>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
