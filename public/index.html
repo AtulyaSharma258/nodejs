@@ -2,127 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Krishna Water Supply Company Pvt. Ltd.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Krishna Water Supply Company</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <!-- Header -->
   <header>
+    <img src="images/krishna logo.png" alt="Krishna Water Supply Logo" class="logo">
+    <h1>Krishna Water Supply Company</h1>
+    <h2>Supplying Quality Pipes & Fittings Since 1984</h2>
     <nav>
-      <div class="logo">KRISHNA <span>WATER SUPPLY</span></div>
-      <ul id="navLinks">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">Directors</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+      <a href="#products">Products</a>
+      <a href="#directors">Directors</a>
+      <a href="#enquiry">Enquiry</a>
     </nav>
   </header>
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Krishna Water Supply Co. Pvt. Ltd.</h1>
-        <p>
-          Trusted supplier and fabricator of MS Casing Pipes, Tube Well Solutions, and Water Supply Systems since 1973.
-        </p>
-        <button id="enquiryBtn" class="btn-primary">Send Enquiry</button>
-      </div>
-      <img src="images/patty.png" alt="Pipe" class="hero-image">
-    </section>
 
-    <section id="products">
-      <h2>Our Products</h2>
-      <div class="product-list">
-        <div class="product-card">
-          <img src="images/ms-pipe.jpg" alt="MS Casing Pipe">
-          <h3>MS Casing Pipes</h3>
-          <p>High-quality Mild Steel casing pipes for tube wells and water supply infrastructure.</p>
-        </div>
-        <div class="product-card">
-          <img src="images/slotted-pipe.jpg" alt="Slotted Pipe">
-          <h3>Slotted Pipes</h3>
-          <p>Precision slotted pipes for efficient water filtration and tube well construction.</p>
-        </div>
-        <div class="product-card">
-          <img src="images/flange.jpg" alt="Flange">
-          <h3>Flanges & Fittings</h3>
-          <p>Rugged MS and SS flanges, pipe fittings, well screens, and tubular poles.</p>
-        </div>
-        <div class="product-card">
-          <img src="images/column-pipe.jpg" alt="Column Pipe">
-          <h3>Column & Tube Well Pipes</h3>
-          <p>Durable pipes designed for long-lasting tube well and irrigation systems.</p>
-        </div>
-      </div>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="images/Column Pipe.webp" alt="Column Pipe" class="hero-img">
+    <div class="hero-text">
+      <h3>Your trusted source for MS Casing, Slotted, Column Pipes and Flange Fittings</h3>
+      <button id="enquiryBtn">Enquire Now</button>
+    </div>
+  </section>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="service-list">
-        <div class="service-card">
-          <h3>Tube Well Construction</h3>
-          <p>Complete drilling and tube well installation using advanced rigs and equipment.</p>
-        </div>
-        <div class="service-card">
-          <h3>Water Supply Systems</h3>
-          <p>Design and implementation of water supply solutions for rural, industrial, and municipal clients.</p>
-        </div>
-        <div class="service-card">
-          <h3>Wholesale & Export</h3>
-          <p>Wholesale, retail, and export of pipes, fittings, and structural components across India and abroad.</p>
-        </div>
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-gallery">
+      <div class="product-card">
+        <img src="images/Column Pipe.webp" alt="Column Pipe">
+        <h4>Column Pipe</h4>
       </div>
-    </section>
+      <div class="product-card">
+        <img src="images/Flange.webp" alt="Flange Fittings">
+        <h4>Flange & Fittings</h4>
+      </div>
+      <div class="product-card">
+        <img src="images/Slotted Pipe.webp" alt="Slotted Pipe">
+        <h4>Slotted Pipe</h4>
+      </div>
+      <div class="product-card">
+        <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe">
+        <h4>MS Casing Pipe</h4>
+      </div>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2>Directors</h2>
-      <div class="directors">
-        <div class="director-card">
-          <img src="images/director1.jpg" alt="Sanjay Sharma">
-          <h3>Sanjay Sharma</h3>
-          <p>Managing Director</p>
-        </div>
-        <div class="director-card">
-          <img src="images/director2.jpg" alt="Shakuntla Sharma">
-          <h3>Shakuntla Sharma</h3>
-          <p>Director</p>
-        </div>
+  <!-- Directors -->
+  <section id="directors" class="directors">
+    <h2>Meet the Directors</h2>
+    <div class="director-list">
+      <div class="director-card">
+        <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
+        <h4>Sanjay Sharma</h4>
+        <p>Managing Director</p>
       </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-details">
-        <p><strong>Address:</strong> B-17, Site-IV, Sahibabad Industrial Area, Ghaziabad, UP, 201010</p>
-        <p><strong>Phone:</strong> <a href="tel:+919810044606">+91-98100 44606</a></p>
-        <p><strong>Email:</strong> <a href="mailto:kwspl@bol.net.in">kwspl@bol.net.in</a></p>
-        <button id="enquiryBtn2" class="btn-primary">Send Enquiry</button>
+      <div class="director-card">
+        <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
+        <h4>Atulya Sharma</h4>
+        <p>Director</p>
       </div>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Krishna Water Supply Co. Pvt. Ltd. | All Rights Reserved
-  </footer>
+    </div>
+  </section>
 
   <!-- Enquiry Modal -->
-  <div class="modal" id="enquiryModal">
+  <div id="enquiryModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Send Enquiry</h2>
-      <form id="enquiryForm" autocomplete="off">
-        <input type="text" id="enquiryName" placeholder="Your Name" required>
-        <input type="email" id="enquiryEmail" placeholder="Your Email" required>
-        <textarea id="enquiryMessage" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn-primary">Send</button>
-        <div id="enquiryStatus"></div>
+      <span id="closeModal" class="close">&times;</span>
+      <h3>Send an Enquiry</h3>
+      <form id="enquiryForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
       </form>
+      <div id="enquiryStatus"></div>
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Krishna Water Supply Company. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
