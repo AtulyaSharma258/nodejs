@@ -1,21 +1,13 @@
-// Modal open/close logic
-const enquiryBtn = document.getElementById('enquiryBtn');
-const enquiryModal = document.getElementById('enquiryModal');
-const closeModal = document.getElementById('closeModal');
+// Smooth scroll and fake enquiry form for demo
+document.querySelector('.enquire-btn').addEventListener('click', () => {
+  document.getElementById('enquiry').scrollIntoView({behavior: 'smooth'});
+});
 
-enquiryBtn.onclick = () => enquiryModal.classList.add('active');
-closeModal.onclick = () => enquiryModal.classList.remove('active');
-window.onclick = (e) => {
-  if (e.target === enquiryModal) enquiryModal.classList.remove('active');
-};
-
-// Enquiry form logic
-document.getElementById('enquiryForm').onsubmit = function(e) {
+document.getElementById('enquiryForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  document.getElementById('enquiryStatus').textContent = "Thank you! We'll contact you soon.";
+  document.getElementById('enquiryThanks').textContent = "Thank you for your enquiry! We'll get back to you soon.";
   setTimeout(() => {
-    enquiryModal.classList.remove('active');
-    document.getElementById('enquiryStatus').textContent = '';
+    document.getElementById('enquiryThanks').textContent = "";
     document.getElementById('enquiryForm').reset();
-  }, 1400);
-};
+  }, 4500);
+});
