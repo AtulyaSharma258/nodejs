@@ -1,270 +1,286 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #d4e6fa 0%, #cce1f6 100%);
   margin: 0;
-  background: linear-gradient(135deg, #e0ecf7 0%, #fff7e6 100%);
-  color: #12314e;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #043369;
 }
+
 header {
+  background: #1061bb;
+  padding: 2rem 0 1rem 0;
   text-align: center;
-  background: #fff;
-  padding: 1.3rem 0 0.5rem 0;
-  box-shadow: 0 2px 12px #e7e7e7a0;
-  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 6px 24px #0b347322;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.logo {
-  height: 60px;
-  margin-bottom: 0.3rem;
+header img {
+  width: 54px;
+  display: block;
+  margin: 0 auto 6px auto;
 }
 header h1 {
-  margin: 0.2rem 0 0 0;
-  font-size: 2.3rem;
-  letter-spacing: 1.2px;
-  color: #125ca5;
+  color: #fff;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
-header h2 {
-  color: #ce8b22;
-  font-size: 1.18rem;
-  font-weight: 400;
-  margin: 0.3rem 0 1rem 0;
+header .subtitle {
+  color: #ffeaa7;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
 }
 nav {
-  margin-top: 0.5rem;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  background: #0e4e94;
+  padding: 0.7rem 0;
+  border-radius: 12px 12px 0 0;
 }
 nav a {
-  display: inline-block;
-  margin: 0 1.2rem;
-  color: #125ca5;
-  font-weight: bold;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.12rem;
   transition: color 0.2s;
+  padding: 4px 12px;
+  border-radius: 8px;
 }
-nav a:hover {
-  color: #ef6d22;
+nav a:hover, nav a.active {
+  background: #40a6ff;
+  color: #043369;
 }
+
 .hero {
+  max-width: 950px;
+  margin: 2.2rem auto 2rem auto;
+  background: linear-gradient(110deg, #f5fafd 65%, #e4f0fa 100%);
+  box-shadow: 0 8px 36px #0b347310;
+  border-radius: 2rem;
+  padding: 2.4rem 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem 1.2rem 1rem;
   gap: 2.5rem;
-  max-width: 950px;
-  margin: 0 auto;
 }
 .hero-img {
-  max-width: 170px;
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px #12314e13;
+  width: 140px;
   background: #fff;
-  padding: 0.4rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 22px #40a6ff19;
+  padding: 8px;
+  margin-right: 1.5rem;
 }
-.hero-text {
-  max-width: 500px;
-}
-.hero-text h3 {
-  color: #12314e;
+.hero-content h2 {
+  color: #043369;
+  margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
-  font-weight: 600;
 }
-.hero-text button {
-  background: linear-gradient(90deg, #125ca5, #36c9e5);
+.hero-content p {
+  color: #18447a;
+  margin-bottom: 1.5rem;
+  font-size: 1.11rem;
+}
+.hero-content .enquire-btn {
+  background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
   color: #fff;
   border: none;
-  border-radius: 28px;
-  font-size: 1.16rem;
-  padding: 0.7rem 2.2rem;
-  margin-top: 1rem;
+  border-radius: 18px;
+  padding: 0.7rem 2.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 700;
-  box-shadow: 0 2px 12px #36c9e57a;
-  transition: background 0.2s;
+  box-shadow: 0 4px 14px #1196ff45;
+  transition: background 0.15s, color 0.15s;
 }
-.hero-text button:hover {
-  background: linear-gradient(90deg, #ef6d22 30%, #f8b51e 100%);
-  color: #fff;
+.hero-content .enquire-btn:hover {
+  background: linear-gradient(90deg, #fff 0%, #40a6ff 100%);
+  color: #1196ff;
 }
-.products {
-  padding: 3rem 1rem 1rem 1rem;
-  background: #f7fbfd;
-  margin: 2rem 0 0 0;
+
+.products-section {
+  max-width: 1250px;
+  margin: 2.5rem auto;
+  background: #f5fbffbb;
   border-radius: 2rem;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.products h2 {
+  padding: 2rem 0 3rem 0;
+  box-shadow: 0 6px 36px #40a6ff18;
   text-align: center;
-  color: #125ca5;
-  margin-bottom: 2.2rem;
 }
-.product-gallery {
+.products-section h2 {
+  color: #1866b0;
+  margin: 0 0 2.4rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.products-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.2rem;
+  gap: 2.5rem;
+  margin-top: 1rem;
 }
 .product-card {
   background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 24px #125ca527;
-  padding: 1.5rem 1.3rem 1.3rem 1.3rem;
-  width: 200px;
-  text-align: center;
-  transition: transform 0.17s, box-shadow 0.19s;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 16px #40a6ff25;
+  width: 210px;
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  transition: transform 0.18s, box-shadow 0.16s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .product-card:hover {
-  transform: translateY(-7px) scale(1.03);
-  box-shadow: 0 8px 36px #ef6d2255;
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 36px #1196ff28;
 }
 .product-card img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 95px;
   object-fit: contain;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
+  background: #f0f7fb;
+  border-radius: 0.9rem;
 }
-.product-card h4 {
-  margin: 0.3rem 0 0 0;
-  color: #ef6d22;
-  font-size: 1.09rem;
-  font-weight: 600;
+.product-card .product-name {
+  font-weight: bold;
+  color: #ff7b00;
+  font-size: 1.1rem;
+  margin-top: 8px;
 }
-.directors {
-  padding: 3rem 1rem 1.3rem 1rem;
-  background: #fff;
-  max-width: 800px;
-  margin: 2.3rem auto 1.2rem auto;
-  border-radius: 2rem;
-  box-shadow: 0 2px 18px #9ab8e040;
-}
-.directors h2 {
+
+.directors-section {
+  max-width: 950px;
+  margin: 2.5rem auto;
+  background: #f5fafd;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 18px #40a6ff15;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
   text-align: center;
-  color: #125ca5;
+}
+.directors-section h2 {
+  color: #1061bb;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
-.director-list {
+.directors-grid {
   display: flex;
-  gap: 2.2rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.2rem;
 }
 .director-card {
-  background: #f7fbfd;
+  background: #fff;
   border-radius: 1.1rem;
-  padding: 1.1rem 1.3rem;
-  box-shadow: 0 2px 8px #36c9e544;
-  text-align: center;
-  min-width: 180px;
-  max-width: 210px;
-  transition: transform 0.13s;
-}
-.director-card:hover {
-  transform: scale(1.045);
-  box-shadow: 0 6px 16px #ce8b2230;
+  box-shadow: 0 3px 12px #1196ff17;
+  padding: 1rem 2rem 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 210px;
 }
 .director-card img {
-  width: 92px;
-  height: 92px;
+  width: 95px;
+  height: 95px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #125ca5;
-  margin-bottom: 0.7rem;
+  border: 4px solid #1196ff22;
+  margin-bottom: 1rem;
 }
-.director-card h4 {
-  margin: 0.2rem 0 0.1rem 0;
-  color: #125ca5;
+.director-name {
+  font-weight: 700;
+  color: #043369;
   font-size: 1.12rem;
 }
-.director-card p {
-  margin: 0;
-  color: #ef6d22;
+.director-role {
+  color: #ff7b00;
   font-size: 0.95rem;
+  margin-top: 0.2rem;
 }
+
+.enquiry-section {
+  max-width: 550px;
+  margin: 2.5rem auto 2rem auto;
+  background: #e4f0fa;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px #1196ff14;
+  padding: 2.2rem 2rem 2.5rem 2rem;
+  text-align: center;
+}
+.enquiry-section h2 {
+  color: #1196ff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.7rem;
+}
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.enquiry-form input,
+.enquiry-form textarea {
+  font-size: 1.1rem;
+  border: 2px solid #1196ff45;
+  border-radius: 0.9rem;
+  padding: 0.7rem 1.1rem;
+  background: #fff;
+  transition: box-shadow 0.18s;
+  resize: none;
+}
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #1196ff66;
+}
+.enquiry-form button {
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #1196ff38;
+  margin-top: 0.4rem;
+  transition: background 0.12s;
+}
+.enquiry-form button:hover {
+  background: #fff;
+  color: #1196ff;
+  border: 1.5px solid #40a6ff;
+}
+
+.thanks-message {
+  color: #1866b0;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1.13rem;
+  min-height: 1.3em;
+}
+
 footer {
   text-align: center;
   color: #fff;
-  background: #125ca5;
-  padding: 1.1rem 0 1.2rem 0;
-  margin-top: 3rem;
+  background: #1061bb;
+  padding: 1.3rem 0 1.3rem 0;
+  margin-top: 2rem;
   border-radius: 1rem 1rem 0 0;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 -5px 24px #125ca523;
+  box-shadow: 0 -5px 24px #1368ce22;
 }
 
-/* Enquiry Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 99;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: #0004;
-  align-items: center;
-  justify-content: center;
-}
-.modal.active {
-  display: flex;
-}
-.modal-content {
-  background: #fff;
-  padding: 2.2rem 1.7rem 1.7rem 1.7rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 6px 44px #125ca555;
-  width: 90%;
-  max-width: 370px;
-  position: relative;
-}
-.close {
-  position: absolute;
-  right: 18px;
-  top: 12px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: #ce8b22;
-  font-weight: bold;
-}
-#enquiryForm {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-#enquiryForm input, #enquiryForm textarea {
-  padding: 0.7rem 1rem;
-  border-radius: 10px;
-  border: 1.5px solid #125ca54a;
-  font-size: 1.04rem;
-}
-#enquiryForm textarea {
-  resize: vertical;
-  min-height: 70px;
-}
-#enquiryForm button {
-  background: linear-gradient(90deg, #125ca5, #36c9e5);
-  color: #fff;
-  border: none;
-  border-radius: 24px;
-  font-size: 1.08rem;
-  padding: 0.6rem 0;
-  font-weight: 700;
-  margin-top: 0.6rem;
-  cursor: pointer;
-  transition: background 0.19s;
-}
-#enquiryForm button:hover {
-  background: linear-gradient(90deg, #ef6d22 30%, #f8b51e 100%);
-  color: #fff;
-}
-#enquiryStatus {
-  text-align: center;
-  color: #36c9e5;
-  font-size: 1.03rem;
-  margin-top: 0.7rem;
-}
-@media (max-width: 700px) {
-  .hero, .product-gallery, .director-list {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-img {
-    margin-bottom: 1.2rem;
-  }
+@media (max-width: 900px) {
+  .hero { flex-direction: column; gap: 1.2rem; padding: 1.2rem 1.2rem; }
+  .hero-img { margin-right: 0; }
+  .products-grid { flex-direction: column; gap: 1.5rem; }
+  .directors-grid { flex-direction: column; gap: 1.2rem;}
 }
