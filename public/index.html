@@ -2,59 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Krusty Krab</title>
+  <title>Krishna Water Supply Company Pvt. Ltd.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="header-characters">
-      <img src="images/patty.png" class="krabby-logo" alt="Krabby Patty">
-      <img src="images/spongebob.png" class="header-sb" alt="SpongeBob">
-      <img src="images/squidward.png" class="header-squidward" alt="Squidward">
-      <img src="images/krabs.png" class="header-krabs" alt="Mr. Krabs">
-    </div>
-    <h1>The Krusty Krab</h1>
-    <h2>Home of the World Famous Krabby Patty!</h2>
+    <nav>
+      <div class="logo">KRISHNA <span>WATER SUPPLY</span></div>
+      <ul id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Directors</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
   </header>
-
   <main>
-    <section class="order-section">
-      <h3>Order Your Krabby Patty!</h3>
-      <form id="orderForm">
-        <input type="text" id="nameInput" placeholder="Your name (e.g. SpongeBob)" required />
-        <select id="orderInput" required>
-          <option value="">Choose your patty...</option>
-          <option>Krabby Patty</option>
-          <option>Double Krabby Patty</option>
-          <option>Krusty Combo Meal</option>
-          <option>Kelp Shake</option>
-          <option>Coral Bits</option>
-          <option>Jellyfish Jelly Deluxe</option>
-        </select>
-        <button type="submit">Order!</button>
-      </form>
-      <div class="spongebob-reaction" id="reaction"></div>
-      <img src="images/jellyfish.png" class="jellyfish" alt="Jellyfish">
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Krishna Water Supply Co. Pvt. Ltd.</h1>
+        <p>
+          Trusted supplier and fabricator of MS Casing Pipes, Tube Well Solutions, and Water Supply Systems since 1973.
+        </p>
+        <button id="enquiryBtn" class="btn-primary">Send Enquiry</button>
+      </div>
+      <img src="images/patty.png" alt="Pipe" class="hero-image">
     </section>
 
-    <section class="orders-board">
-      <h3>Current Orders</h3>
-      <ul id="ordersList"></ul>
-      <img src="images/patrick.png" class="pat-float" alt="Patrick">
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/ms-pipe.jpg" alt="MS Casing Pipe">
+          <h3>MS Casing Pipes</h3>
+          <p>High-quality Mild Steel casing pipes for tube wells and water supply infrastructure.</p>
+        </div>
+        <div class="product-card">
+          <img src="images/slotted-pipe.jpg" alt="Slotted Pipe">
+          <h3>Slotted Pipes</h3>
+          <p>Precision slotted pipes for efficient water filtration and tube well construction.</p>
+        </div>
+        <div class="product-card">
+          <img src="images/flange.jpg" alt="Flange">
+          <h3>Flanges & Fittings</h3>
+          <p>Rugged MS and SS flanges, pipe fittings, well screens, and tubular poles.</p>
+        </div>
+        <div class="product-card">
+          <img src="images/column-pipe.jpg" alt="Column Pipe">
+          <h3>Column & Tube Well Pipes</h3>
+          <p>Durable pipes designed for long-lasting tube well and irrigation systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service-card">
+          <h3>Tube Well Construction</h3>
+          <p>Complete drilling and tube well installation using advanced rigs and equipment.</p>
+        </div>
+        <div class="service-card">
+          <h3>Water Supply Systems</h3>
+          <p>Design and implementation of water supply solutions for rural, industrial, and municipal clients.</p>
+        </div>
+        <div class="service-card">
+          <h3>Wholesale & Export</h3>
+          <p>Wholesale, retail, and export of pipes, fittings, and structural components across India and abroad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Directors</h2>
+      <div class="directors">
+        <div class="director-card">
+          <img src="images/director1.jpg" alt="Sanjay Sharma">
+          <h3>Sanjay Sharma</h3>
+          <p>Managing Director</p>
+        </div>
+        <div class="director-card">
+          <img src="images/director2.jpg" alt="Shakuntla Sharma">
+          <h3>Shakuntla Sharma</h3>
+          <p>Director</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-details">
+        <p><strong>Address:</strong> B-17, Site-IV, Sahibabad Industrial Area, Ghaziabad, UP, 201010</p>
+        <p><strong>Phone:</strong> <a href="tel:+919810044606">+91-98100 44606</a></p>
+        <p><strong>Email:</strong> <a href="mailto:kwspl@bol.net.in">kwspl@bol.net.in</a></p>
+        <button id="enquiryBtn2" class="btn-primary">Send Enquiry</button>
+      </div>
     </section>
   </main>
-
   <footer>
-    <span>🍔 The Krusty Krab • Bikini Bottom, Pacific Ocean • "Is mayonnaise an instrument?"</span>
-    <div class="footer-crew">
-      <img src="images/spongebob.png" class="footer-sb" alt="SpongeBob">
-      <img src="images/patrick.png" class="footer-pat" alt="Patrick">
-      <img src="images/krabs.png" class="footer-krabs" alt="Mr. Krabs">
-      <img src="images/squidward.png" class="footer-squidward" alt="Squidward">
-      <img src="images/starfish.png" class="footer-starfish" alt="Starfish">
-    </div>
+    &copy; 2025 Krishna Water Supply Co. Pvt. Ltd. | All Rights Reserved
   </footer>
-  <script src="script.js"></script>
+
+  <!-- Enquiry Modal -->
+  <div class="modal" id="enquiryModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Send Enquiry</h2>
+      <form id="enquiryForm" autocomplete="off">
+        <input type="text" id="enquiryName" placeholder="Your Name" required>
+        <input type="email" id="enquiryEmail" placeholder="Your Email" required>
+        <textarea id="enquiryMessage" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Send</button>
+        <div id="enquiryStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
+
