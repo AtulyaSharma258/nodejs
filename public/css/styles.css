@@ -1,374 +1,152 @@
 body {
-  background: linear-gradient(120deg, #d4e6fa 0%, #cce1f6 100%);
   margin: 0;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  color: #043369;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #e6f0fa;
+  color: #18447a;
+  min-height: 100vh;
+}
+
+/* Background overlay */
+.hero-bg {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: linear-gradient(100deg, #1061bbcc 60%, #0008 100%),
+    url('../images/Column Pipe.webp') center/cover no-repeat;
+  /* Swap out with your preferred background image */
+  filter: brightness(0.8) blur(1px);
 }
 
 header {
-  background: #1061bb;
-  padding: 2rem 0 1rem 0;
-  text-align: center;
-  box-shadow: 0 6px 24px #0b347322;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 1rem 2rem;
+  background: transparent;
 }
 
-header img {
-  width: 54px;
-  display: block;
-  margin: 0 auto 6px auto;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 
-header h1 {
+.logo-area img {
+  height: 46px;
+  border-radius: 10px;
+  background: #fff8;
+  padding: 5px;
+}
+
+.logo-area .brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
   color: #fff;
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-header .subtitle {
-  color: #ffeaa7;
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin: 0 0 16px 0;
-  letter-spacing: 0.5px;
+  text-shadow: 1px 2px 4px #1061bbcc;
 }
 
 nav {
-  margin-top: 12px;
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  background: #0e4e94;
-  padding: 0.7rem 0;
-  border-radius: 12px 12px 0 0;
-  position: relative;
+  gap: 2rem;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.12rem;
-  transition: color 0.2s, background 0.18s;
-  padding: 4px 14px;
-  border-radius: 8px;
+  font-size: 1.09rem;
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.17s;
+}
+nav a:hover, nav a.active {
+  background: #fff3;
+  color: #1061bb;
+}
+
+/* Hero Section */
+.main-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: 6vw auto 0 7vw;
+  min-height: 80vh;
+  justify-content: center;
+  z-index: 1;
   position: relative;
-  outline: none;
 }
-
-nav a:hover,
-nav a:focus-visible {
-  background: #40a6ff;
-  color: #043369;
-  outline: 2px solid #1196ff77;
-  outline-offset: 2px;
-}
-
-nav a.active {
-  background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
+.main-hero h1 {
+  font-size: 2.9rem;
   color: #fff;
-  box-shadow: 0 2px 16px #1196ff44;
-  text-decoration: underline;
-}
-
-.hero {
-  max-width: 950px;
-  margin: 2.2rem auto 2rem auto;
-  background: linear-gradient(110deg, #f5fafd 65%, #e4f0fa 100%);
-  box-shadow: 0 8px 36px #1196ff22;
-  border-radius: 2rem;
-  padding: 2.4rem 2.5rem;
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.hero-img {
-  width: 140px;
-  background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 8px 22px #40a6ff25;
-  padding: 8px;
-  margin-right: 1.5rem;
-}
-
-.hero-content h2 {
-  color: #043369;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
-}
-
-.hero-content p {
-  color: #18447a;
-  margin-bottom: 1.5rem;
-  font-size: 1.11rem;
-}
-
-.hero-content .enquire-btn {
-  background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
-  color: #fff;
-  border: none;
-  border-radius: 18px;
-  padding: 0.7rem 2.3rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 14px #1196ff45;
-  transition: background 0.15s, color 0.15s;
-}
-
-.hero-content .enquire-btn:hover,
-.hero-content .enquire-btn:focus-visible {
-  background: linear-gradient(90deg, #fff 0%, #40a6ff 100%);
-  color: #1196ff;
-  outline: 2px solid #1196ff99;
-}
-
-.products-section {
-  max-width: 1250px;
-  margin: 2.5rem auto;
-  background: #f5fbffbb;
-  border-radius: 2rem;
-  padding: 2rem 0 3rem 0;
-  box-shadow: 0 6px 36px #40a6ff18;
-  text-align: center;
-}
-
-.products-section h2 {
-  color: #1866b0;
-  margin: 0 0 2.4rem 0;
-  font-size: 2rem;
   font-weight: 800;
+  margin-bottom: 18px;
+  line-height: 1.15;
+  text-shadow: 1px 2px 12px #1061bb77;
 }
-
-.products-grid {
+.main-hero p {
+  color: #f0f7fc;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 36px;
+  text-shadow: 1px 1px 7px #1061bb80;
+  max-width: 420px;
+}
+.hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.5rem;
-  margin-top: 1rem;
+  gap: 1.1rem;
 }
-
-.product-card {
-  background: #fff;
-  border-radius: 1.3rem;
-  box-shadow: 0 4px 16px #40a6ff25;
-  width: 210px;
-  padding: 1.2rem 1rem 1.5rem 1rem;
-  transition: transform 0.18s, box-shadow 0.16s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  border: 2px solid #fff;
-}
-.product-card:hover,
-.product-card:focus-visible {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 12px 36px #1196ff28;
-  border: 2px solid #1196ff44;
-  outline: none;
-}
-
-.product-card img {
-  width: 110px;
-  height: 95px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-  background: #f0f7fb;
-  border-radius: 0.9rem;
-}
-
-.product-card .product-name {
-  font-weight: bold;
-  color: #ff7b00;
-  font-size: 1.1rem;
-  margin-top: 8px;
-}
-
-.directors-section {
-  max-width: 950px;
-  margin: 2.5rem auto;
-  background: #f5fafd;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 18px #40a6ff15;
-  padding: 2rem 1.5rem 2.5rem 1.5rem;
-  text-align: center;
-}
-.directors-section h2 {
-  color: #1061bb;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-.directors-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.2rem;
-}
-.director-card {
-  background: #fff;
-  border-radius: 1.1rem;
-  box-shadow: 0 3px 12px #1196ff17;
-  padding: 1rem 2rem 1.4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 210px;
-}
-.director-card img {
-  width: 95px;
-  height: 95px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #1196ff22;
-  margin-bottom: 1rem;
-}
-.director-name {
-  font-weight: 700;
-  color: #043369;
-  font-size: 1.12rem;
-}
-.director-role {
-  color: #ff7b00;
-  font-size: 0.95rem;
-  margin-top: 0.2rem;
-}
-
-.enquiry-section {
-  max-width: 550px;
-  margin: 2.5rem auto 2rem auto;
-  background: #e4f0fa;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 16px #1196ff14;
-  padding: 2.2rem 2rem 2.5rem 2rem;
-  text-align: center;
-}
-.enquiry-section h2 {
-  color: #1196ff;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.7rem;
-}
-.enquiry-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.enquiry-form input,
-.enquiry-form textarea {
-  font-size: 1.1rem;
-  border: 2px solid #1196ff45;
-  border-radius: 0.9rem;
-  padding: 0.7rem 1.1rem;
-  background: #fff;
-  transition: box-shadow 0.18s, border-color 0.15s;
-  resize: none;
-}
-.enquiry-form input:focus,
-.enquiry-form textarea:focus {
-  outline: none;
-  border-color: #1196ffbb;
-  box-shadow: 0 0 8px #1196ff66;
-}
-.enquiry-form button {
-  padding: 0.7rem 2rem;
+.hero-actions .cta,
+.hero-actions .services {
+  padding: 0.8rem 2.2rem;
   border: none;
-  border-radius: 1rem;
-  background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
-  color: #fff;
-  font-size: 1.15rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 2px 10px #1196ff38;
-  margin-top: 0.4rem;
-  transition: background 0.12s, color 0.12s, border 0.12s;
-}
-.enquiry-form button:hover,
-.enquiry-form button:focus-visible {
-  background: #fff;
-  color: #1196ff;
-  border: 2px solid #40a6ff;
-  outline: none;
-}
-
-.thanks-message {
-  color: #1866b0;
-  margin-top: 12px;
-  font-weight: 600;
+  border-radius: 8px;
   font-size: 1.13rem;
-  min-height: 1.3em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  box-shadow: 0 2px 14px #0002;
 }
-
-footer {
-  text-align: center;
+.hero-actions .cta {
+  background: #ffa53c;
   color: #fff;
-  background: #1061bb;
-  padding: 1.3rem 0 1.3rem 0;
-  margin-top: 2rem;
-  border-radius: 1rem 1rem 0 0;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  box-shadow: 0 -5px 24px #1368ce22;
+  border: 2px solid #ffa53c;
 }
-
-@media (max-width: 1100px) {
-  .products-grid { flex-wrap: wrap; }
-}
-@media (max-width: 900px) {
-  .hero { flex-direction: column; gap: 1.2rem; padding: 1.2rem 1.2rem; }
-  .hero-img { margin-right: 0; }
-  .products-grid { flex-direction: column; gap: 1.5rem; }
-  .directors-grid { flex-direction: column; gap: 1.2rem;}
-}
-
-@media (max-width: 600px) {
-  nav { gap: 1.2rem; font-size: 0.93rem; padding: 0.5rem 0;}
-  .hero,
-  .products-section,
-  .directors-section,
-  .enquiry-section { padding: 1.2rem 0.6rem; }
-  .product-card { width: 100%; }
-  .director-card { width: 100%; }
-}
-.projects-section {
-  max-width: 900px;
-  margin: 2.5rem auto;
-  padding: 2.2rem 1.2rem 2.5rem 1.2rem;
-  background: #f5fbff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 18px #1196ff19;
-}
-.projects-section h2 {
-  color: #1061bb;
-  margin-top: 0;
-  font-size: 2rem;
-}
-.projects-list {
-  margin-top: 2.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.project-card {
+.hero-actions .cta:hover {
   background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 10px #1196ff13;
-  padding: 1.2rem 1.3rem;
-  border-left: 5px solid #1196ff;
+  color: #ffa53c;
+  border: 2px solid #ffa53c;
 }
-.project-card h3 {
-  margin: 0 0 0.5rem 0;
-  color: #1196ff;
-  font-size: 1.18rem;
+.hero-actions .services {
+  background: #fff3;
+  color: #fff;
+  border: 2px solid #fff3;
 }
-.project-card p {
-  color: #18447a;
-  font-size: 1.05rem;
-  margin: 0;
+.hero-actions .services:hover {
+  background: #fff;
+  color: #1061bb;
+  border: 2px solid #1061bb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-hero {
+    margin: 5vw 6vw 0 6vw;
+    max-width: 95vw;
+    align-items: flex-start;
+  }
+  header {
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: flex-start;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+}
+@media (max-width: 550px) {
+  .main-hero h1 { font-size: 1.6rem; }
+  .logo-area .brand { font-size: 1.02rem; }
 }
