@@ -1,171 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Krishna Water Supply Company</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e6f0fa;
+      color: #18447a;
+    }
+    .hero-bg {
+      position: fixed;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      background: linear-gradient(100deg, #1061bbcc 60%, #0008 100%),
+        url('images/Column\ Pipe.webp') center/cover no-repeat;
+      /* ^-- swap to any pipe product for the background */
+      filter: brightness(0.8) blur(1px);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem 1rem 2rem;
+      background: transparent;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .logo-area img {
+      height: 46px;
+      border-radius: 10px;
+      background: #fff8;
+      padding: 5px;
+    }
+    .logo-area .brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      color: #fff;
+      text-shadow: 1px 2px 4px #1061bbcc;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.09rem;
+      padding: 7px 15px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.17s;
+    }
+    nav a:hover, nav a.active {
+      background: #fff3;
+      color: #1061bb;
+    }
+    .main-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 600px;
+      margin: 6vw auto 0 7vw;
+      min-height: 80vh;
+      justify-content: center;
+      z-index: 1;
+      position: relative;
+    }
+    .main-hero h1 {
+      font-size: 2.9rem;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 18px;
+      line-height: 1.15;
+      text-shadow: 1px 2px 12px #1061bb77;
+    }
+    .main-hero p {
+      color: #f0f7fc;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 36px;
+      text-shadow: 1px 1px 7px #1061bb80;
+      max-width: 420px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1.1rem;
+    }
+    .hero-actions .cta,
+    .hero-actions .services {
+      padding: 0.8rem 2.2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.13rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s;
+      box-shadow: 0 2px 14px #0002;
+    }
+    .hero-actions .cta {
+      background: #ffa53c;
+      color: #fff;
+      border: 2px solid #ffa53c;
+    }
+    .hero-actions .cta:hover {
+      background: #fff;
+      color: #ffa53c;
+      border: 2px solid #ffa53c;
+    }
+    .hero-actions .services {
+      background: #fff3;
+      color: #fff;
+      border: 2px solid #fff3;
+    }
+    .hero-actions .services:hover {
+      background: #fff;
+      color: #1061bb;
+      border: 2px solid #1061bb;
+    }
+    @media (max-width: 900px) {
+      .main-hero {
+        margin: 5vw 6vw 0 6vw;
+        max-width: 95vw;
+        align-items: flex-start;
+      }
+      header {
+        flex-direction: column;
+        gap: 1.1rem;
+        align-items: flex-start;
+        padding: 1rem 1rem 1.5rem 1rem;
+      }
+    }
+    @media (max-width: 550px) {
+      .main-hero h1 { font-size: 1.6rem; }
+      .logo-area .brand { font-size: 1.02rem; }
+    }
+  </style>
 </head>
 <body>
+  <div class="hero-bg"></div>
   <header>
-    <img src="images/krishna logo.png" alt="Krishna Logo" />
-    <h1>Krishna Water Supply Company</h1>
-    <div class="subtitle">Supplying Quality Pipes & Fittings Since 1984</div>
+    <div class="logo-area">
+      <img src="images/krishna logo.png" alt="Krishna Water Supply Logo" />
+      <span class="brand">KRISHNA WATER SUPPLY</span>
+    </div>
     <nav>
-      <a href="#products" class="active">Products</a>
-      <a href="#directors">Directors</a>
-      <a href="#enquiry">Enquiry</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="projects.html">Projects</a>
+      <a href="directors.html">Directors</a>
+      <a href="about.html">About</a>
+      <a href="enquiry.html">Enquiry</a>
     </nav>
   </header>
-
-  <section class="hero">
-    <img src="images/Column Pipe.webp" alt="Column Pipes" class="hero-img"/>
-    <div class="hero-content">
-      <h2>Your trusted source for MS Casing, Slotted, Column Pipes and Flange Fittings</h2>
-      <p>Supplying Sahibabad and the NCR region since 1984.</p>
-      <button class="enquire-btn">Enquire Now</button>
-    </div>
-  </section>
-
-  <section id="products" class="products-section">
-    <h2>Our Products</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="images/Column Pipe.webp" alt="Column Pipe">
-        <div class="product-name">Column Pipe</div>
+  <main>
+    <section class="main-hero">
+      <h1>Reliable Pipe & Fitting Solutions<br>for Every Project</h1>
+      <p>
+        Supplying top-quality Column Pipes, Slotted Pipes, MS Casing Pipes, and Flange Fittings since 1984.<br>
+        Trusted by the best, delivered on time—across UP and North India.
+      </p>
+      <div class="hero-actions">
+        <a href="enquiry.html"><button class="cta">Enquire Now</button></a>
+        <a href="products.html"><button class="services">Our Products</button></a>
       </div>
-      <div class="product-card">
-        <img src="images/Flange.webp" alt="Flange & Fittings">
-        <div class="product-name">Flange & Fittings</div>
-      </div>
-      <div class="product-card">
-        <img src="images/Slotted Pipe.webp" alt="Slotted Pipe">
-        <div class="product-name">Slotted Pipe</div>
-      </div>
-      <div class="product-card">
-        <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe">
-        <div class="product-name">MS Casing Pipe</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="directors" class="directors-section">
-    <h2>Directors</h2>
-    <div class="directors-grid">
-      <div class="director-card">
-        <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
-        <div class="director-name">Atulya Sharma</div>
-        <div class="director-role">Director</div>
-      </div>
-      <div class="director-card">
-        <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
-        <div class="director-name">Sanjay Sharma</div>
-        <div class="director-role">Managing Director</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="enquiry" class="enquiry-section">
-    <h2>Enquiry</h2>
-    <form class="enquiry-form" id="enquiryForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Enquiry</button>
-      <div id="enquiryThanks" class="thanks-message"></div>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
-  </footer>
-  <script src="js/script.js"></script>
+    </section>
+  </main>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Krishna Water Supply Company</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header>
-    <img src="images/krishna logo.png" alt="Krishna Logo" />
-    <h1>Krishna Water Supply Company</h1>
-    <div class="subtitle">Supplying Quality Pipes & Fittings Since 1984</div>
-    <nav>
-      <a href="#products" class="active">Products</a>
-      <a href="#directors">Directors</a>
-      <a href="#enquiry">Enquiry</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img src="images/Column Pipe.webp" alt="Column Pipes" class="hero-img"/>
-    <div class="hero-content">
-      <h2>Your trusted source for MS Casing, Slotted, Column Pipes and Flange Fittings</h2>
-      <p>Supplying Sahibabad and the NCR region since 1984.</p>
-      <button class="enquire-btn">Enquire Now</button>
-    </div>
-  </section>
-
-  <section id="products" class="products-section">
-    <h2>Our Products</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="images/Column Pipe.webp" alt="Column Pipe">
-        <div class="product-name">Column Pipe</div>
-      </div>
-      <div class="product-card">
-        <img src="images/Flange.webp" alt="Flange & Fittings">
-        <div class="product-name">Flange & Fittings</div>
-      </div>
-      <div class="product-card">
-        <img src="images/Slotted Pipe.webp" alt="Slotted Pipe">
-        <div class="product-name">Slotted Pipe</div>
-      </div>
-      <div class="product-card">
-        <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe">
-        <div class="product-name">MS Casing Pipe</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="directors" class="directors-section">
-    <h2>Directors</h2>
-    <div class="directors-grid">
-      <div class="director-card">
-        <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
-        <div class="director-name">Atulya Sharma</div>
-        <div class="director-role">Director</div>
-      </div>
-      <div class="director-card">
-        <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
-        <div class="director-name">Sanjay Sharma</div>
-        <div class="director-role">Managing Director</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="enquiry" class="enquiry-section">
-    <h2>Enquiry</h2>
-    <form class="enquiry-form" id="enquiryForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Enquiry</button>
-      <div id="enquiryThanks" class="thanks-message"></div>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
-
-
-
