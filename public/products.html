@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Products | Krishna Water Supply Company</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .grand-products-section {
+      max-width: 1200px;
+      margin: 3.5rem auto 2rem auto;
+      padding: 2.5rem 2rem 3rem 2rem;
+      background: linear-gradient(115deg, #e5f0ff 65%, #c7e1ff 100%);
+      border-radius: 2.5rem;
+      box-shadow: 0 12px 48px #1196ff25;
+      text-align: center;
+      position: relative;
+    }
+    .grand-products-section h1 {
+      font-size: 2.7rem;
+      color: #1061bb;
+      font-weight: 800;
+      margin-bottom: 2.2rem;
+      letter-spacing: 2px;
+      text-shadow: 0 3px 16px #40a6ff19;
+    }
+    .products-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3.2rem 2.4rem;
+    }
+    .grand-product-card {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 6px 32px #1196ff22, 0 2px 8px #1196ff0b;
+      padding: 2.3rem 1.6rem 1.7rem 1.6rem;
+      width: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.19s, box-shadow 0.16s;
+      border: 2.5px solid #e3eeff;
+      position: relative;
+    }
+    .grand-product-card:hover,
+    .grand-product-card:focus-visible {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 14px 50px #40a6ff3b;
+      border-color: #1196ff99;
+      z-index: 2;
+    }
+    .grand-product-img {
+      width: 150px;
+      height: 130px;
+      object-fit: contain;
+      margin-bottom: 1.2rem;
+      background: #f2f8fd;
+      border-radius: 1.1rem;
+      box-shadow: 0 2px 10px #40a6ff10;
+      border: 2px solid #e7f0fa;
+    }
+    .grand-product-name {
+      font-size: 1.28rem;
+      color: #1196ff;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+      text-shadow: 0 2px 8px #40a6ff1a;
+    }
+    .grand-product-desc {
+      color: #043369;
+      font-size: 1.07rem;
+      margin-bottom: 1.3rem;
+      min-height: 48px;
+    }
+    .grand-product-link {
+      display: inline-block;
+      padding: 0.55rem 1.6rem;
+      border-radius: 22px;
+      background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: background 0.15s, color 0.15s;
+      box-shadow: 0 2px 8px #1196ff21;
+      border: none;
+      margin-top: 0.2rem;
+    }
+    .grand-product-link:hover,
+    .grand-product-link:focus-visible {
+      background: #fff;
+      color: #1196ff;
+      border: 2px solid #1196ff;
+      outline: none;
+    }
+    @media (max-width: 1100px) {
+      .products-showcase { gap: 2rem 1rem; }
+      .grand-product-card { width: 90vw; max-width: 370px;}
+    }
+    @media (max-width: 700px) {
+      .grand-products-section { padding: 1.2rem 0.2rem 2rem 0.2rem; }
+      .products-showcase { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/krishna logo.png" alt="Krishna Logo" />
+    <h1>Krishna Water Supply Company</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="directors.html">Directors</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="grand-products-section">
+      <h1>Our Products</h1>
+      <div class="products-showcase">
+
+        <!-- Column Pipe -->
+        <div class="grand-product-card">
+          <img src="images/Column Pipe.webp" alt="Column Pipe" class="grand-product-img">
+          <div class="grand-product-name">Column Pipe</div>
+          <div class="grand-product-desc">
+            Designed for maximum strength and durability, our column pipes are perfect for borewells and deep well submersible pumps, trusted by contractors across North India.
+          </div>
+          <a class="grand-product-link" href="column-pipe.html">Learn More</a>
+        </div>
+
+        <!-- Flange & Fittings -->
+        <div class="grand-product-card">
+          <img src="images/Flange.webp" alt="Flange & Fittings" class="grand-product-img">
+          <div class="grand-product-name">Flange & Fittings</div>
+          <div class="grand-product-desc">
+            Precision-engineered flanges and fittings to ensure a secure, leak-proof connection for water supply lines, pipelines, and industrial applications.
+          </div>
+          <a class="grand-product-link" href="flange.html">Learn More</a>
+        </div>
+
+        <!-- Slotted Pipe -->
+        <div class="grand-product-card">
+          <img src="images/Slotted Pipe.webp" alt="Slotted Pipe" class="grand-product-img">
+          <div class="grand-product-name">Slotted Pipe</div>
+          <div class="grand-product-desc">
+            Slotted pipes built for efficient water filtration and high flow rates, used extensively in groundwater extraction and rainwater harvesting systems.
+          </div>
+          <a class="grand-product-link" href="slotted-pipe.html">Learn More</a>
+        </div>
+
+        <!-- MS Casing Pipe -->
+        <div class="grand-product-card">
+          <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe" class="grand-product-img">
+          <div class="grand-product-name">MS Casing Pipe</div>
+          <div class="grand-product-desc">
+            Manufactured from premium mild steel, our casing pipes offer robust protection for borewells and are suitable for municipal and industrial water supply projects.
+          </div>
+          <a class="grand-product-link" href="ms-casing-pipe.html">Learn More</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
+  </footer>
+</body>
+</html>
