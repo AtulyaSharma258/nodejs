@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MS Casing Pipes | Krishna Water Supply Company</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .product-detail-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      background: linear-gradient(110deg, #e7f4ff 65%, #e1ecfa 100%);
+      border-radius: 2rem;
+      box-shadow: 0 8px 36px #1196ff22;
+      padding: 2.8rem 2.3rem 2.6rem 2.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .product-detail-img {
+      width: 170px;
+      height: 140px;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+      background: #f7fcff;
+      border-radius: 1.1rem;
+      box-shadow: 0 3px 16px #40a6ff12;
+      border: 2px solid #e1ecfa;
+    }
+    .product-detail-section h1 {
+      color: #1196ff;
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: 1.2px;
+    }
+    .product-detail-section h2 {
+      color: #ff7b00;
+      margin-bottom: 1.3rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .product-detail-section p {
+      color: #1a406b;
+      font-size: 1.13rem;
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+    .highlight-box {
+      background: #f2faff;
+      border-left: 6px solid #1196ff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px #1196ff13;
+      padding: 1.1rem 1.2rem 1rem 1.4rem;
+      margin-bottom: 2rem;
+      color: #043369;
+      text-align: left;
+    }
+    .enquiry-form {
+      max-width: 450px;
+      margin: 2rem auto 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/krishna logo.png" alt="Krishna Logo" />
+    <h1>Krishna Water Supply Company</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="directors.html">Directors</a>
+      <a href="products.html">Products</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-detail-section">
+      <img src="images/MS Casing Pipe.webp" alt="MS Casing Pipe" class="product-detail-img" />
+      <h1>MS Casing Pipes</h1>
+      <h2>Strength That Protects Your Source</h2>
+      <p>
+        Krishna Water Supply Company supplies robust MS (Mild Steel) casing pipes, engineered to safeguard borewells and deep wells for the long haul. Our pipes are manufactured from high-grade steel, with rigorous quality checks at every step, making them the top choice for municipal, industrial, and large-scale agricultural water projects.
+      </p>
+      <div class="highlight-box">
+        <b>Why trust our MS casing pipes?</b>
+        <ul>
+          <li>Exceptional tensile strength and long service life</li>
+          <li>Superior resistance to corrosion and soil pressure</li>
+          <li>Available in all standard sizes and thicknesses</li>
+          <li>Precision welding and strict dimensional tolerance</li>
+          <li>Fast delivery, custom orders, and expert guidance</li>
+        </ul>
+        We combine modern technology with decades of supply experience, so you get lasting performance, competitive pricing, and personal service—every time.
+      </div>
+      <h2>Enquire About MS Casing Pipes</h2>
+      <form class="enquiry-form" id="enquiryForm-ms">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Enquiry" required></textarea>
+        <button type="submit">Send Enquiry</button>
+        <div id="enquiryThanks" class="thanks-message"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
+  </footer>
+  <script>
+    // Simple front-end handler for the enquiry form (fake submit)
+    document.getElementById('enquiryForm-ms').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('enquiryThanks').textContent = "Thank you for your enquiry! We'll contact you soon.";
+      setTimeout(() => {
+        document.getElementById('enquiryThanks').textContent = "";
+        document.getElementById('enquiryForm-ms').reset();
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
