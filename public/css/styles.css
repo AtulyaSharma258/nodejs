@@ -12,13 +12,15 @@ header {
   box-shadow: 0 6px 24px #0b347322;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
+
 header img {
   width: 54px;
   display: block;
   margin: 0 auto 6px auto;
 }
+
 header h1 {
   color: #fff;
   margin: 0;
@@ -26,6 +28,7 @@ header h1 {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 header .subtitle {
   color: #ffeaa7;
   font-size: 1.15rem;
@@ -33,6 +36,7 @@ header .subtitle {
   margin: 0 0 16px 0;
   letter-spacing: 0.5px;
 }
+
 nav {
   margin-top: 12px;
   display: flex;
@@ -41,50 +45,69 @@ nav {
   background: #0e4e94;
   padding: 0.7rem 0;
   border-radius: 12px 12px 0 0;
+  position: relative;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.12rem;
-  transition: color 0.2s;
-  padding: 4px 12px;
+  transition: color 0.2s, background 0.18s;
+  padding: 4px 14px;
   border-radius: 8px;
+  position: relative;
+  outline: none;
 }
-nav a:hover, nav a.active {
+
+nav a:hover,
+nav a:focus-visible {
   background: #40a6ff;
   color: #043369;
+  outline: 2px solid #1196ff77;
+  outline-offset: 2px;
+}
+
+nav a.active {
+  background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
+  color: #fff;
+  box-shadow: 0 2px 16px #1196ff44;
+  text-decoration: underline;
 }
 
 .hero {
   max-width: 950px;
   margin: 2.2rem auto 2rem auto;
   background: linear-gradient(110deg, #f5fafd 65%, #e4f0fa 100%);
-  box-shadow: 0 8px 36px #0b347310;
+  box-shadow: 0 8px 36px #1196ff22;
   border-radius: 2rem;
   padding: 2.4rem 2.5rem;
   display: flex;
   align-items: center;
   gap: 2.5rem;
 }
+
 .hero-img {
   width: 140px;
   background: #fff;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 22px #40a6ff19;
+  box-shadow: 0 8px 22px #40a6ff25;
   padding: 8px;
   margin-right: 1.5rem;
 }
+
 .hero-content h2 {
   color: #043369;
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
 }
+
 .hero-content p {
   color: #18447a;
   margin-bottom: 1.5rem;
   font-size: 1.11rem;
 }
+
 .hero-content .enquire-btn {
   background: linear-gradient(90deg, #1196ff 0%, #40a6ff 100%);
   color: #fff;
@@ -97,9 +120,12 @@ nav a:hover, nav a.active {
   box-shadow: 0 4px 14px #1196ff45;
   transition: background 0.15s, color 0.15s;
 }
-.hero-content .enquire-btn:hover {
+
+.hero-content .enquire-btn:hover,
+.hero-content .enquire-btn:focus-visible {
   background: linear-gradient(90deg, #fff 0%, #40a6ff 100%);
   color: #1196ff;
+  outline: 2px solid #1196ff99;
 }
 
 .products-section {
@@ -111,12 +137,14 @@ nav a:hover, nav a.active {
   box-shadow: 0 6px 36px #40a6ff18;
   text-align: center;
 }
+
 .products-section h2 {
   color: #1866b0;
   margin: 0 0 2.4rem 0;
   font-size: 2rem;
   font-weight: 800;
 }
+
 .products-grid {
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +152,7 @@ nav a:hover, nav a.active {
   gap: 2.5rem;
   margin-top: 1rem;
 }
+
 .product-card {
   background: #fff;
   border-radius: 1.3rem;
@@ -134,11 +163,17 @@ nav a:hover, nav a.active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  border: 2px solid #fff;
 }
-.product-card:hover {
+.product-card:hover,
+.product-card:focus-visible {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 12px 36px #1196ff28;
+  border: 2px solid #1196ff44;
+  outline: none;
 }
+
 .product-card img {
   width: 110px;
   height: 95px;
@@ -147,6 +182,7 @@ nav a:hover, nav a.active {
   background: #f0f7fb;
   border-radius: 0.9rem;
 }
+
 .product-card .product-name {
   font-weight: bold;
   color: #ff7b00;
@@ -231,12 +267,13 @@ nav a:hover, nav a.active {
   border-radius: 0.9rem;
   padding: 0.7rem 1.1rem;
   background: #fff;
-  transition: box-shadow 0.18s;
+  transition: box-shadow 0.18s, border-color 0.15s;
   resize: none;
 }
 .enquiry-form input:focus,
 .enquiry-form textarea:focus {
   outline: none;
+  border-color: #1196ffbb;
   box-shadow: 0 0 8px #1196ff66;
 }
 .enquiry-form button {
@@ -250,12 +287,14 @@ nav a:hover, nav a.active {
   cursor: pointer;
   box-shadow: 0 2px 10px #1196ff38;
   margin-top: 0.4rem;
-  transition: background 0.12s;
+  transition: background 0.12s, color 0.12s, border 0.12s;
 }
-.enquiry-form button:hover {
+.enquiry-form button:hover,
+.enquiry-form button:focus-visible {
   background: #fff;
   color: #1196ff;
-  border: 1.5px solid #40a6ff;
+  border: 2px solid #40a6ff;
+  outline: none;
 }
 
 .thanks-message {
@@ -278,9 +317,22 @@ footer {
   box-shadow: 0 -5px 24px #1368ce22;
 }
 
+@media (max-width: 1100px) {
+  .products-grid { flex-wrap: wrap; }
+}
 @media (max-width: 900px) {
   .hero { flex-direction: column; gap: 1.2rem; padding: 1.2rem 1.2rem; }
   .hero-img { margin-right: 0; }
   .products-grid { flex-direction: column; gap: 1.5rem; }
   .directors-grid { flex-direction: column; gap: 1.2rem;}
+}
+
+@media (max-width: 600px) {
+  nav { gap: 1.2rem; font-size: 0.93rem; padding: 0.5rem 0;}
+  .hero,
+  .products-section,
+  .directors-section,
+  .enquiry-section { padding: 1.2rem 0.6rem; }
+  .product-card { width: 100%; }
+  .director-card { width: 100%; }
 }
