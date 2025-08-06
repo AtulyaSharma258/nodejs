@@ -336,3 +336,39 @@ footer {
   .product-card { width: 100%; }
   .director-card { width: 100%; }
 }
+.projects-section {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2.2rem 1.2rem 2.5rem 1.2rem;
+  background: #f5fbff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 18px #1196ff19;
+}
+.projects-section h2 {
+  color: #1061bb;
+  margin-top: 0;
+  font-size: 2rem;
+}
+.projects-list {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px #1196ff13;
+  padding: 1.2rem 1.3rem;
+  border-left: 5px solid #1196ff;
+}
+.project-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1196ff;
+  font-size: 1.18rem;
+}
+.project-card p {
+  color: #18447a;
+  font-size: 1.05rem;
+  margin: 0;
+}
