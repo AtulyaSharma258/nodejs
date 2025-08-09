@@ -4,43 +4,118 @@
   <meta charset="UTF-8">
   <title>Our Directors | Krishna Water Supply</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .directors-section {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      text-align: center;
+    }
+    .directors-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1061bb;
+    }
+    .directors-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .director-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 3px 12px #1196ff17;
+      padding: 1.2rem 1.5rem;
+      width: 220px;
+      text-align: center;
+    }
+    .director-card img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #1196ff22;
+      margin-bottom: 0.8rem;
+    }
+    .director-name {
+      font-weight: 700;
+      color: #043369;
+      font-size: 1.1rem;
+    }
+    .director-role {
+      color: #ff7b00;
+      font-size: 0.95rem;
+      margin: 0.2rem 0 0.6rem 0;
+    }
+    .director-card p {
+      font-size: 0.95rem;
+      color: #18447a;
+      line-height: 1.4;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #0e4e94;
+      padding: 0.7rem 0;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #40a6ff;
+      color: #043369;
+    }
+  </style>
 </head>
 <body>
-  <div class="main-container">
-    <div class="left-panel">
-      <img src="images/krishna logo.png" alt="Krishna Logo" class="logo-img">
-    </div>
-    <div class="right-panel">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="directors.html" class="active">Directors</a>
-        <a href="products.html">Products</a>
-        <a href="projects.html">Projects</a>
-        <a href="enquiry.html">Enquiry</a>
-      </nav>
-      <section class="directors-section">
-        <h2>Our Directors</h2>
-        <div class="directors-grid">
-          <div class="director-card">
-            <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
-            <div class="director-name">Sanjay Sharma</div>
-            <div class="director-role">Managing Director</div>
-            <p>
-              Third-generation business owner, Sanjay Sharma took over Krishna Water Supply from his father and elevated it to a household name in Uttar Pradesh.
-            </p>
-          </div>
-          <div class="director-card">
-            <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
-            <div class="director-name">Atulya Sharma</div>
-            <div class="director-role">Director</div>
-            <p>
-              With an engineering background from Canada, Atulya brings technical expertise and fresh perspective to help his father run and grow the family business.
-            </p>
-          </div>
+  <header>
+    <h1>Krishna Water Supply Company</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="directors.html" class="active">Directors</a>
+      <a href="products.html">Products</a>
+      <a href="projects.html">Projects</a>
+      <a href="enquiry.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="directors-section">
+      <h2>Our Directors</h2>
+      <div class="directors-grid">
+        <div class="director-card">
+          <img src="images/Sanjay Sharma.webp" alt="Sanjay Sharma">
+          <div class="director-name">Sanjay Sharma</div>
+          <div class="director-role">Managing Director</div>
+          <p>
+            Third-generation business owner, Sanjay Sharma took over Krishna Water Supply from his father and elevated it to a household name in Uttar Pradesh.
+          </p>
         </div>
-      </section>
-    </div>
-  </div>
+        <div class="director-card">
+          <img src="images/IMG_2345.JPG" alt="Atulya Sharma">
+          <div class="director-name">Atulya Sharma</div>
+          <div class="director-role">Director</div>
+          <p>
+            With an engineering background from Canada, Atulya brings technical expertise and fresh perspective to help his father run and grow the family business.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
+  </footer>
 </body>
 </html>
