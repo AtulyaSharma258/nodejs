@@ -4,10 +4,89 @@
   <meta charset="UTF-8">
   <title>Projects | Krishna Water Supply Company</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    header {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      color: #043369;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #0e4e94;
+      padding: 0.7rem 0;
+      border-radius: 12px;
+      margin: 0.8rem auto 0;
+      max-width: 900px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #40a6ff;
+      color: #043369;
+    }
+    .projects-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      padding: 2rem;
+      background: linear-gradient(110deg, #e7f4ff 65%, #e1ecfa 100%);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 36px #1196ff22;
+    }
+    .projects-section h2 {
+      color: #1061bb;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .projects-section p {
+      color: #1a406b;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.2rem;
+      border: 2px solid #e3eeff;
+      box-shadow: 0 2px 10px #40a6ff10;
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: #1196ff;
+      font-size: 1.25rem;
+    }
+    .project-card p {
+      margin: 0.4rem 0 0 0;
+      color: #043369;
+      font-size: 1.05rem;
+    }
+    @media (max-width: 700px) {
+      nav { gap: 1rem; }
+      .projects-section { padding: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/krishna logo.png" alt="Krishna Logo" />
     <h1>Krishna Water Supply Company</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -25,9 +104,7 @@
       Over our long history, Krishna Water Supply Company has proudly contributed to a wide range of projects across Uttar Pradesh and North India. Our products and expertise have been trusted by government agencies, private contractors, and industrial leaders.
     </p>
 
-    <!-- ====== Add your project info below ====== -->
     <div class="projects-list">
-      <!-- EXAMPLE PROJECT CARD -->
       <div class="project-card">
         <h3>Municipal Water Supply - Ghaziabad</h3>
         <p>Supplied MS casing pipes and column pipes for major borewell projects across the city.</p>
@@ -40,9 +117,7 @@
         <h3>Industrial Estates, Sahibabad</h3>
         <p>Partnered with major manufacturers for robust industrial water supply lines.</p>
       </div>
-      <!-- ====== Duplicate or add more .project-card blocks for each project ====== -->
     </div>
-    <!-- ====== End project info ====== -->
   </section>
 
   <footer>
