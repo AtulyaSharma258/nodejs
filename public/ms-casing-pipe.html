@@ -11,15 +11,15 @@
       background: linear-gradient(110deg, #e7f4ff 65%, #e1ecfa 100%);
       border-radius: 2rem;
       box-shadow: 0 8px 36px #1196ff22;
-      padding: 2.8rem 2.3rem 2.6rem 2.3rem;
+      padding: 2.8rem 2.3rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
     .product-detail-img {
-      width: 170px;
-      height: 140px;
+      width: 150px;
+      height: 120px;
       object-fit: contain;
       margin-bottom: 1.5rem;
       background: #f7fcff;
@@ -29,22 +29,22 @@
     }
     .product-detail-section h1 {
       color: #1196ff;
-      font-size: 2.1rem;
+      font-size: 2rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.1px;
     }
     .product-detail-section h2 {
       color: #ff7b00;
       margin-bottom: 1.3rem;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       letter-spacing: 0.3px;
     }
     .product-detail-section p {
       color: #1a406b;
-      font-size: 1.13rem;
-      line-height: 1.7;
+      font-size: 1.05rem;
+      line-height: 1.6;
       margin-bottom: 1.4rem;
     }
     .highlight-box {
@@ -52,20 +52,64 @@
       border-left: 6px solid #1196ff;
       border-radius: 1rem;
       box-shadow: 0 2px 10px #1196ff13;
-      padding: 1.1rem 1.2rem 1rem 1.4rem;
+      padding: 1rem 1.2rem;
       margin-bottom: 2rem;
       color: #043369;
       text-align: left;
     }
+    .highlight-box ul {
+      padding-left: 1.2rem;
+      margin-top: 0.8rem;
+    }
     .enquiry-form {
       max-width: 450px;
       margin: 2rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .enquiry-form input,
+    .enquiry-form textarea {
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .enquiry-form button {
+      background: #1196ff;
+      color: #fff;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #0e4e94;
+      padding: 0.7rem 0;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #40a6ff;
+      color: #043369;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/krishna logo.png" alt="Krishna Logo" />
     <h1>Krishna Water Supply Company</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -111,7 +155,6 @@
     &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
   </footer>
   <script>
-    // Simple front-end handler for the enquiry form (fake submit)
     document.getElementById('enquiryForm-ms').addEventListener('submit', function(e) {
       e.preventDefault();
       document.getElementById('enquiryThanks').textContent = "Thank you for your enquiry! We'll contact you soon.";
