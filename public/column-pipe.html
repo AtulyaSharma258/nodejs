@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Column Pipes | Krishna Water Supply Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .product-detail-section {
@@ -79,7 +80,6 @@
       <a href="products.html">Products</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Enquiry</a>
-      <!-- If your enquiry page is actually enquiry.html, change the link above -->
     </nav>
   </header>
 
@@ -104,13 +104,21 @@
       </div>
 
       <h2>Enquire About Column Pipes</h2>
-      <!-- UPDATED: mailto form -->
-      <form class="enquiry-form"
-            action="mailto:atulyasharma258@gmail.com?subject=Enquiry%20-%20Column%20Pipes"
-            method="POST" enctype="text/plain">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" placeholder="Your Enquiry" required></textarea>
+      <form
+        class="enquiry-form"
+        action="https://formspree.io/f/xrblrkpd"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Enquiry" required></textarea>
+
+        <!-- Tag which product this came from -->
+        <input type="hidden" name="product" value="Column Pipes">
+
+        <!-- Optional success redirect -->
+        <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html"> -->
+
         <button type="submit">Send Enquiry</button>
       </form>
     </section>
