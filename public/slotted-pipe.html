@@ -92,7 +92,33 @@
     }
     .enquiry-form {
       max-width: 450px;
-      margin: 2rem auto 0 auto;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+    .enquiry-form input, .enquiry-form textarea {
+      padding: .7rem .9rem;
+      border: 1px solid #cbd6e6;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #fff;
+    }
+    .enquiry-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .enquiry-form button {
+      background: #1196ff;
+      color: #fff;
+      border: none;
+      padding: .8rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .enquiry-form button:hover {
+      background: #0b79d1;
     }
   </style>
 </head>
@@ -129,12 +155,14 @@
         Backed by our commitment to quality and service, our slotted pipes help you build lasting, efficient water infrastructure at the best value.
       </div>
       <h2>Enquire About Slotted Pipes</h2>
-      <form class="enquiry-form" id="enquiryForm-slotted">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Enquiry" required></textarea>
+      <!-- UPDATED: mailto form -->
+      <form class="enquiry-form"
+            action="mailto:atulyasharma258@gmail.com?subject=Enquiry%20-%20Slotted%20Pipes"
+            method="POST" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Enquiry" required></textarea>
         <button type="submit">Send Enquiry</button>
-        <div id="enquiryThanks" class="thanks-message"></div>
       </form>
     </section>
   </main>
@@ -142,15 +170,5 @@
   <footer>
     &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
   </footer>
-  <script>
-    document.getElementById('enquiryForm-slotted').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('enquiryThanks').textContent = "Thank you for your enquiry! We'll contact you soon.";
-      setTimeout(() => {
-        document.getElementById('enquiryThanks').textContent = "";
-        document.getElementById('enquiryForm-slotted').reset();
-      }, 5000);
-    });
-  </script>
 </body>
 </html>
