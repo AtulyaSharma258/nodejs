@@ -141,12 +141,14 @@
         With decades of supply experience, we help you build infrastructure that lasts—backed by integrity, fast delivery, and unmatched value.
       </div>
       <h2>Enquire About Flanges & Fittings</h2>
-      <form class="enquiry-form" id="enquiryForm-flange">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Enquiry" required></textarea>
+      <!-- Updated form -->
+      <form class="enquiry-form"
+            action="mailto:atulyasharma258@gmail.com?subject=Enquiry%20-%20Flanges%20and%20Fittings"
+            method="POST" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Enquiry" required></textarea>
         <button type="submit">Send Enquiry</button>
-        <div id="enquiryThanks" class="thanks-message"></div>
       </form>
     </section>
   </main>
@@ -154,15 +156,5 @@
   <footer>
     &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
   </footer>
-  <script>
-    document.getElementById('enquiryForm-flange').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('enquiryThanks').textContent = "Thank you for your enquiry! We'll contact you soon.";
-      setTimeout(() => {
-        document.getElementById('enquiryThanks').textContent = "";
-        document.getElementById('enquiryForm-flange').reset();
-      }, 5000);
-    });
-  </script>
 </body>
 </html>
