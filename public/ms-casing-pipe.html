@@ -3,8 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>MS Casing Pipes | Krishna Water Supply Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css">
   <style>
+    header {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      color: #043369;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #0e4e94;
+      padding: 0.7rem 0;
+      border-radius: 12px;
+      margin: 0.8rem auto 0;
+      max-width: 900px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #40a6ff;
+      color: #043369;
+    }
+
     .product-detail-section {
       max-width: 900px;
       margin: 3rem auto 2rem auto;
@@ -61,6 +96,7 @@
       padding-left: 1.2rem;
       margin-top: 0.8rem;
     }
+
     .enquiry-form {
       max-width: 450px;
       margin: 2rem auto 0;
@@ -70,41 +106,39 @@
     }
     .enquiry-form input,
     .enquiry-form textarea {
-      padding: 0.6rem;
+      padding: 0.6rem 0.9rem;
       border-radius: 0.5rem;
-      border: 1px solid #ccc;
+      border: 1px solid #cbd6e6;
       font-size: 1rem;
+      background: #fff;
+    }
+    .enquiry-form textarea {
+      min-height: 140px;
+      resize: vertical;
     }
     .enquiry-form button {
       background: #1196ff;
       color: #fff;
       border: none;
-      padding: 0.7rem;
-      border-radius: 0.5rem;
-      font-weight: bold;
+      padding: 0.75rem 1.2rem;
+      border-radius: 0.6rem;
+      font-weight: 700;
       cursor: pointer;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background: #0e4e94;
-      padding: 0.7rem 0;
-      border-radius: 12px;
-      margin-bottom: 2rem;
+    .enquiry-form button:hover {
+      background: #0b79d1;
     }
-    nav a {
+
+    footer {
+      text-align: center;
       color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.05rem;
-      padding: 4px 12px;
-      border-radius: 8px;
+      background: #1061bb;
+      padding: 1.1rem 0;
+      margin-top: 2rem;
     }
-    nav a:hover,
-    nav a.active {
-      background: #40a6ff;
-      color: #043369;
+    @media (max-width: 700px) {
+      nav { gap: 1rem; }
+      .product-detail-section { padding: 1.6rem 1.2rem; }
     }
   </style>
 </head>
@@ -140,14 +174,23 @@
         </ul>
         We combine modern technology with decades of supply experience, so you get lasting performance, competitive pricing, and personal service—every time.
       </div>
+
       <h2>Enquire About MS Casing Pipes</h2>
-      <!-- UPDATED: mailto form -->
-      <form class="enquiry-form"
-            action="mailto:atulyasharma258@gmail.com?subject=Enquiry%20-%20MS%20Casing%20Pipes"
-            method="POST" enctype="text/plain">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" placeholder="Your Enquiry" required></textarea>
+      <form
+        class="enquiry-form"
+        action="https://formspree.io/f/xrblrkpd"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Enquiry" required></textarea>
+
+        <!-- Optional hidden field to tag the product on your email -->
+        <input type="hidden" name="product" value="MS Casing Pipes">
+
+        <!-- Optional redirect after success -->
+        <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html"> -->
+
         <button type="submit">Send Enquiry</button>
       </form>
     </section>
