@@ -57,13 +57,16 @@
       color: #043369;
       text-align: left;
     }
-    .highlight-box ul {
-      margin: 0.5rem 0 0 1.2rem;
+    .highlight-box ul { margin: 0.5rem 0 0 1.2rem; }
+    .enquiry-form { max-width: 450px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: .9rem; }
+    .enquiry-form input, .enquiry-form textarea {
+      padding: .7rem .9rem; border: 1px solid #cbd6e6; border-radius: 10px; font-size: 1rem; background: #fff;
     }
-    .enquiry-form {
-      max-width: 450px;
-      margin: 2rem auto 0 auto;
+    .enquiry-form textarea { min-height: 140px; resize: vertical; }
+    .enquiry-form button {
+      background: #1196ff; color: #fff; border: none; padding: .8rem 1.4rem; border-radius: 10px; font-weight: 700; cursor: pointer;
     }
+    .enquiry-form button:hover { background: #0b79d1; }
   </style>
 </head>
 <body>
@@ -76,6 +79,7 @@
       <a href="products.html">Products</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Enquiry</a>
+      <!-- If your enquiry page is actually enquiry.html, change the link above -->
     </nav>
   </header>
 
@@ -88,7 +92,7 @@
         Krishna Water Supply Company’s column pipes are engineered for excellence—built to withstand the high pressures and tough conditions of deep well and borewell applications. Our pipes are manufactured using only the highest-grade materials, ensuring long-lasting performance and reliability for agricultural, industrial, and municipal water systems.
       </p>
       <div class="highlight-box">
-        <b>What sets us apart?</b>  
+        <b>What sets us apart?</b>
         <ul>
           <li>Strict quality control at every manufacturing stage</li>
           <li>Corrosion-resistant, high tensile strength materials</li>
@@ -98,13 +102,16 @@
         </ul>
         <p>With decades of experience, we’re dedicated to delivering the <strong>highest value</strong> in the market: superior quality at a fair price, and support that lasts long after installation.</p>
       </div>
+
       <h2>Enquire About Column Pipes</h2>
-      <form class="enquiry-form" id="enquiryForm-column">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Enquiry" required></textarea>
+      <!-- UPDATED: mailto form -->
+      <form class="enquiry-form"
+            action="mailto:atulyasharma258@gmail.com?subject=Enquiry%20-%20Column%20Pipes"
+            method="POST" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Enquiry" required></textarea>
         <button type="submit">Send Enquiry</button>
-        <div id="enquiryThanks" class="thanks-message"></div>
       </form>
     </section>
   </main>
@@ -112,15 +119,5 @@
   <footer>
     &copy; 2024 Krishna Water Supply Company &middot; Sahibabad, India
   </footer>
-  <script>
-    document.getElementById('enquiryForm-column').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('enquiryThanks').textContent = "Thank you for your enquiry! We'll contact you soon.";
-      setTimeout(() => {
-        document.getElementById('enquiryThanks').textContent = "";
-        document.getElementById('enquiryForm-column').reset();
-      }, 5000);
-    });
-  </script>
 </body>
 </html>
