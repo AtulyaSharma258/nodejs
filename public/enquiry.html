@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enquiry | Krishna Water Supply Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Page-specific tweaks */
+    header { text-align: center; margin-top: 1rem; }
+    header h1 { margin: 0; color: #043369; font-size: 1.6rem; font-weight: 800; }
+    nav {
+      display: flex; justify-content: center; gap: 2rem; background: #0e4e94;
+      padding: 0.7rem 0; border-radius: 12px; margin: 0.8rem auto 0; max-width: 900px;
+    }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; font-size: 1.05rem; padding: 4px 12px; border-radius: 8px; }
+    nav a:hover, nav a.active { background: #40a6ff; color: #043369; }
+
+    .enquiry-wrap {
+      max-width: 900px; margin: 2.4rem auto; padding: 2rem;
+      background: linear-gradient(110deg, #e7f4ff 65%, #e1ecfa 100%);
+      border-radius: 1.5rem; box-shadow: 0 8px 36px #1196ff22;
+    }
+    .enquiry-wrap h2 { color: #1061bb; margin: 0 0 0.6rem 0; font-size: 2rem; text-align: center; }
+    .enquiry-intro { color: #1a406b; text-align: center; margin-bottom: 1.6rem; }
+
+    .enquiry-form {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.2rem;
+      max-width: 780px; margin: 0 auto;
+    }
+    .enquiry-form .full { grid-column: 1 / -1; }
+    .enquiry-form input, .enquiry-form select, .enquiry-form textarea {
+      width: 100%; padding: 0.7rem 0.9rem; border: 1px solid #cbd6e6; border-radius: 10px; font-size: 1rem; background: #fff;
+    }
+    .enquiry-form textarea { min-height: 160px; resize: vertical; }
+    .enquiry-actions {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.4rem;
+    }
+    .enquiry-form button {
+      background: #1196ff; color: #fff; border: none; padding: 0.85rem 1.4rem; border-radius: 10px; font-weight: 700; cursor: pointer;
+    }
+    .enquiry-form button:hover { background: #0b79d1; }
+
+    .muted { color: #406892; font-size: .95rem; }
+    .checkbox {
+      display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; color: #18447a;
+    }
+    .checkbox input { width: 18px; height: 18px; }
+
+    @media (max-width: 800px) {
+      .enquiry-form { grid-template-columns: 1fr; }
+      .enquiry-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Krishna Water Supply Company</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="directors.html">Directors</a>
+      <a href="products.html">Products</a>
+      <a href="projects.html">Projects</a>
+      <a href="enquiry.html" class="active">Enquiry</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="enquiry-wrap">
+      <h2>Send an Enquiry</h2>
+      <p class="enquiry-intro">
+        Tell us what you need — Column Pipes, Slotted Pipes, MS Casing, or Flanges & Fittings — and we’ll get back to you quickly.
+      </p>
+
+      <!-- Formspree-powered, secure form -->
+      <form class="enquiry-form" action="https://formspree.io/f/xrblrkpd" method="POST">
+        <!-- Contact details -->
+        <div>
+          <label for="name" class="muted">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="e.g., Priya Singh" required />
+        </div>
+        <div>
+          <label for="email" class="muted">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div>
+          <label for="phone" class="muted">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 98xxxxxxx" />
+        </div>
+        <div>
+          <label for="company" class="muted">Company (optional)</label>
+          <input id="company" name="company" type="text" placeholder="Company name" />
+        </div>
+
+        <!-- Project/product intent -->
+        <div>
+          <label for="product" class="muted">Product</label>
+          <select id="product" name="product" required>
+            <option value="">Select a product…</option>
+            <option>Column Pipes</option>
+            <option>Slotted Pipes</option>
+            <option>MS Casing Pipes</option>
+            <option>Flanges & Fittings</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div>
+          <label for="quantity" class="muted">Quantity / Size (optional)</label>
+          <input id="quantity" name="quantity" type="text" placeholder="e.g., 200m, 6\" dia" />
+        </div>
+
+        <!-- Message -->
+        <div class="full">
+          <label for="message" class="muted">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your requirement…" required></textarea>
+        </div>
+
+        <!-- Consent + submit -->
+        <div class="full enquiry-actions">
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required />
+            I agree to be contacted about my enquiry.
+          </label>
+
+          <div style="flex:1"></div>
+
+          <button type="submit">Send Enquiry</button>
+        </div>
+
+        <!-- Hidden helpers -->
+        <input type="hidden" name="_subject" value="Website Enquiry - Krishna Water Supply" />
+        <!-- Optional: success redirect page (create thanks.html first, then uncomment) -->
+        <!-- <input type="hidden" name="_redirect" value="https://your-domain/thanks.html" /> -->
+
+        <!-- Honeypot to reduce spam (Formspree recognizes this) -->
+        <input type="text" name="_gotcha" style="display:none" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Krishna Water Supply Company · Sahibabad, India
+  </footer>
+</body>
+</html>
