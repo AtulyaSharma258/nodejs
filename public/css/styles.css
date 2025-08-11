@@ -139,4 +139,65 @@ img {
   font-size: 0.93rem;
   margin-top: 0.18rem;
 }
+/* ===== Splash Intro ===== */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1200px 600px at 20% 20%, #e8f3ff 0%, #d4e6fa 40%, #cce1f6 100%);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.splash-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  gap: 14px;
+}
+
+.splash-logo {
+  width: clamp(180px, 28vw, 360px);
+  height: auto;
+  animation: floatY 3.2s ease-in-out infinite;
+  filter: drop-shadow(0 14px 26px rgba(17,150,255,.18));
+}
+
+.splash-hint {
+  font: 600 1rem/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0e4e94;
+  background: rgba(255,255,255,.7);
+  padding: .5rem .9rem;
+  border-radius: .75rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(17,150,255,.12);
+}
+
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-16px); }
+  100% { transform: translateY(0); }
+}
+
+/* Fade out when clicked */
+.splash.is-exiting {
+  opacity: 0;
+  transform: scale(.98);
+  pointer-events: none;
+}
+
+/* Hide site until splash is dismissed */
+.site-content.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.site-content.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .35s ease;
+}
+
 
